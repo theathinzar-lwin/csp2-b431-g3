@@ -10,7 +10,7 @@ router.post('/', productController.createProduct);
 router.get('/all', auth.verify, productController.getAllProducts);
 
 // Retrieve all active products
-router.get('/active', auth.verify, productController.getActiveProducts);
+router.get('/active', productController.getActiveProducts);
 
 // Retrieve a single product by ID
 router.get('/:productId', auth.verify, productController.getProductById);
